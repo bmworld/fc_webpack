@@ -1,7 +1,7 @@
 {
   "name": "fc_webpack",
   "version": "1.0.0",
-  "description": "",
+  "description": "### 0. webpack의 역할 - 웹팩의 순수기능은 config에 지정된 파일들을 읽고, 합쳐서 output해주는 것 까지다. - 파일을 read 또는 compile하려면 plugin의 도움이 필요하다.",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development",
@@ -11,9 +11,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "autoprefixer": "^10.4.2",
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^5.2.7",
     "html-webpack-plugin": "^5.5.0",
+    "postcss": "^8.4.7",
+    "postcss-loader": "^6.2.1",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
@@ -23,5 +29,17 @@
   },
   "dependencies": {
     "reset-css": "^5.0.1"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmworld/fc_webpack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bmworld/fc_webpack/issues"
+  },
+  "homepage": "https://github.com/bmworld/fc_webpack#readme"
 }

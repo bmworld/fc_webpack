@@ -108,6 +108,9 @@ const CopyPlugin = require ('copy-webpack-plugin');
 ```
 
 
+
+
+
 ### 6. 파일 읽기
 
 #### CSS
@@ -161,4 +164,60 @@ import '../static/scss/main.scss';
 import '../static/css/main.css';
 
 // css파일을 모듈로 취급하여, js 또는 jsx파일에서 불러 사용하기위하여 "css-loader"가 필요한 것이다.
+```
+
+
+<br>
+
+### 7. Autoprefixer: 모든 브라우저 CSS 대응
+
+7-1. install plugin
+```bash
+$ npm i -D postcss autoprefixer postcss-loader
+```
+---
+- postcss: STYLE
+
+- autoprefixer : 브라우저별 대응되는 코드 추가
+- postcss-loader: 공급업체 접두사 추가. 
+- postcss플러그인 적용
+
+<br>
+
+7-2. package.json의 browserslist에 옵션 추가
+```json
+"browserslist": [
+  "> 1%",
+  "last 2 versions"
+]
+```
+
+
+7-3. .pstcssrc.js 파일 설정
+```js
+// node JS 에서 실행되는 설정 파일이다.
+module.exports = {
+  plugins: [
+    require('autoprefixer')
+  ]
+}
+```
+
+이제 display:flex등의 코드는 autoprefixer기능을 통해서 다음과 같은 효과를 낸다
+
+```html
+h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+```
+
+
+<br>
+
+### 8. Babel 설치
+
+```bash
+$ npm i -D @babel/core @babel/preset-env @babel/plugin-transform-runtime
 ```
