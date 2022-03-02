@@ -218,6 +218,31 @@ h1 {
 
 ### 8. Babel 설치
 
+<br>
+
+#### babel package 3가지 설치
 ```bash
 $ npm i -D @babel/core @babel/preset-env @babel/plugin-transform-runtime
 ```
+
+
+#### .babelrc파일 설정
+```js
+module.exports = {
+  presets: ['@babel/preset-env'], // 일일이 명시해야 하는 js기능을 한번에 지원
+  plugins: [
+    ['@babel/plugin-transform-runtime'] // 비동기 처리를 위함
+  ]
+}
+```
+
+<br>
+
+#### babel-loader 설치
+```bash
+$ npm i -D babel-loader
+```
+
+
+
+

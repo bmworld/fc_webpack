@@ -52,6 +52,12 @@ module: {
           "sass-loader",
         ],
       },
+      {
+        test: /\.js$/,
+        use: [
+          'babel-loader' // babel을 해석하기 위한 매개체
+        ]
+      }
     ],
   },
 
